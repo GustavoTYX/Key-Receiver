@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Received Key</title>
+</head>
+<body>
+  <div>
+    <p><span id="keyPlaceholder"></span></p>
+  </div>
+
+  <script>
+    const keyPlaceholder = document.getElementById("keyPlaceholder");
+
+    // Get the key from the URL query parameter
+    const queryParams = new URLSearchParams(window.location.search);
+    const receivedKey = queryParams.get("key");
+
+    // Display the received key
+    keyPlaceholder.textContent = receivedKey;
+  </script>
+</body>
+</html>
